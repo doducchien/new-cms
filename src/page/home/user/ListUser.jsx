@@ -15,9 +15,11 @@ export default function ListUser() {
   const userFilter = users.filter((item) => {
     const firstName_ = item.firstName.trim().toLowerCase();
     const lastName_ = item.lastName.trim().toLowerCase();
+    const email_ = item.email.trim().toLowerCase();
+
     const nameOrEmail_ = (filter?.nameOrEmail || "").trim().toLowerCase();
     let condition =
-      firstName_.includes(nameOrEmail_) || lastName_.includes(nameOrEmail_);
+      firstName_.includes(nameOrEmail_) || lastName_.includes(nameOrEmail_) || email_.includes(nameOrEmail_);
     if (filter?.role) condition = condition && item.role == filter?.role;
     if (filter?.plan) condition = condition && item.plan == filter?.plan;
 
