@@ -1,0 +1,131 @@
+$main-cl: #001529;
+$btn-cl: #ab003c;
+//align
+.txt-center{
+    text-align: center;
+}
+
+
+
+
+//size
+
+.w-100p{
+    width: 100%;
+}
+
+.h-100vh{
+    height: 100vh;
+}
+
+.h-100p{
+    height: 100%;
+}
+
+.h-60{
+    height: 60px;
+}
+
+.h-100p-ne-60{
+    height: calc(100% - 60px);
+}
+
+.h-100vh-ne-60{
+    height: calc(100vh - 60px);
+}
+
+
+//position
+.bg-img-login{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+
+//distance
+
+.pd-1rem{
+    padding: 1rem;
+}
+
+.pd-2rem{
+    padding: 2rem;
+}
+
+.mg-top-1rem{
+    margin-top: 1rem;
+}
+
+.mg-0{
+    margin: 0;
+}
+.mg-top-5{
+    margin-top: 5px;
+}
+
+
+
+//color
+.bg-cl-gray{
+    background-color: gray;
+}
+.bg-cl-main{
+    background-color: $main-cl;
+}
+.bg-cl-btn{
+    background-color: $btn-cl;
+    border: none;
+    &:hover{
+        background-color: #dd155b;
+    }
+    &:visited{
+        background-color: $btn-cl;
+    }
+    &:active{
+        background-color: $btn-cl;
+    }
+    &:focus{
+        background-color: $btn-cl;
+    }
+}
+.cl-white{
+    color: white;
+}
+
+
+//decorate
+.ov-fl-auto{
+    overflow: auto;
+}
+.bd-rad-20{
+    border-radius: 20px;
+}
+.bd-left-1-sl-gray{
+    border-left: 1px solid rgb(182, 179, 179);
+}
+
+
+//font
+.fs-1rem{
+    font-size: 1rem;
+}
+.fs-1dot5rem{
+    font-size: 1.5rem;
+}
+
+
+//event
+.cu-po{
+    cursor: pointer;
+}
+.trans-0dot4s{
+    transition: 0.4s;
+}
+
+.hv-gray{
+    &:hover{
+        background-color: rgb(180, 169, 169);
+    }
+}
