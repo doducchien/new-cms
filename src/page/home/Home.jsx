@@ -1,7 +1,7 @@
 import { AppstoreOutlined, BarChartOutlined, CloudOutlined, ShopOutlined, SnippetsOutlined, TeamOutlined, UploadOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
 import { Col, Layout, Menu, Row, } from 'antd'
 import React from 'react'
-import { Link, Route, Switch } from 'react-router-dom';
+import { Link, Redirect, Route, Switch } from 'react-router-dom';
 import BaseHeader from '../../component/BaseHeader';
 import ListUser from './user/ListUser';
 
@@ -72,6 +72,10 @@ export default function Home() {
       <BaseHeader/>
       <div className='h-100vh-ne-60 ov-fl-auto pd-1rem'>
           <Switch>
+            <Route path='/' exact>
+              <Redirect to='/user-management'/>
+
+            </Route>
             <Route path='/user-management'>
                 <ListUser/>
             </Route>
