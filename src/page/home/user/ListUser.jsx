@@ -26,7 +26,7 @@ export default function ListUser() {
     return condition;
   });
   async function getAllUser() {
-    const res = await apiService.get("/users");
+    const res = await apiService.get("/api/users");
     setUsers(res.data);
   }
   useEffect(() => {

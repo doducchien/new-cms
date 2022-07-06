@@ -3,6 +3,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { loginSuccess } from "../../redux/action/authen-action";
+import { authenService } from "../../serice/authen-sercice";
 
 
 
@@ -30,22 +31,14 @@ export default function Login() {
   const dispatch = useDispatch();
   const history = useHistory();
   const onFinish = (values) => {
-    const index = listAccout.findIndex(item=>{
-      return values.username == item.username && values.password == item.password
-    })
-    if(index !== -1){
-      console.log("aaa", values.username)
+    authenService.login(values).then(res=>{
       dispatch(loginSuccess(values.username))
-
       localStorage.setItem("user", JSON.stringify(values))
-      
       window.location.href = "/"
-    }
-    else notification.error({
-      message: "Login fail",
-      description: "User name or password is incorrect",
-      placement:'topLeft'
+    }).catch(e=>{
+      console.log("eeee", e)
     })
+
   };
 
   const onFinishFailed = (errorInfo) => {

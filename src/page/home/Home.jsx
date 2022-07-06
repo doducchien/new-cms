@@ -3,6 +3,7 @@ import { Col, Layout, Menu, Row, } from 'antd'
 import React from 'react'
 import { Link, Redirect, Route, Switch } from 'react-router-dom';
 import BaseHeader from '../../component/BaseHeader';
+import Profile from '../profile/Profile';
 import ListUser from './user/ListUser';
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -78,6 +79,9 @@ export default function Home() {
             </Route>
             <Route path='/user-management'>
                 <ListUser/>
+            </Route>
+            <Route path='/admin/profile'>
+                <Profile/>
             </Route>
           </Switch>
       </div>
