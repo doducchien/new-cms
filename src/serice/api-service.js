@@ -2,8 +2,8 @@ import axios from "axios"
 
 
 const axiosInstance = axios.create({
-    baseURL: 'http://128.199.229.149:9999'
-    // baseURL: 'http://localhost:9999'
+    // baseURL: 'http://128.199.229.149:9999'
+    baseURL: 'http://localhost:9999'
 })
 
 axios.defaults.headers.post['Content-Type'] = 'application/json';

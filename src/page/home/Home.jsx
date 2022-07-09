@@ -3,6 +3,7 @@ import { Col, Layout, Menu, Row, } from 'antd'
 import React from 'react'
 import { Link, Redirect, Route, Switch } from 'react-router-dom';
 import BaseHeader from '../../component/BaseHeader';
+import ChangePassword from '../profile/ChangePassword';
 import Profile from '../profile/Profile';
 import ListUser from './user/ListUser';
 
@@ -82,6 +83,9 @@ export default function Home() {
             </Route>
             <Route path='/admin/profile'>
                 <Profile/>
+            </Route>
+            <Route path='/admin/change-password'>
+                <ChangePassword/>
             </Route>
           </Switch>
       </div>

@@ -51,5 +51,26 @@ const updateProfileAdmin = async (data)=>{
     }
 }
 
+const updatePasswordAdmin = async (data)=>{
+    try{
+        const res = await apiService.put("/authen/password", data);
+        notification.success({
+            message: 'Update password success',
+            description: res?.message || "",
+            placement: 'topLeft'
+        })
+        return res;
 
-export const authenService = {login, getDetailAdmin, updateProfileAdmin};
+    }catch(error){
+        notification.error({
+            message: 'Update password Faild',
+            description: error?.message || "",
+            placement: 'topLeft'
+        })
+        throw error;
+    }
+}
+
+
+
+export const authenService = {login, getDetailAdmin, updateProfileAdmin, updatePasswordAdmin};

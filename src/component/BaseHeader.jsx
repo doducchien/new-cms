@@ -13,6 +13,10 @@ const goToProfile = ()=>{
   window.location.pathname = "/admin/profile";
 }
 
+const gotToChangePassword = ()=>{
+  window.location.pathname = "/admin/change-password"
+}
+
 const menu = (
   <Menu
     items={[
@@ -22,8 +26,13 @@ const menu = (
       },
       {
         key: "1",
+        label: <div onClick={gotToChangePassword}>Change password</div>,
+      },
+      {
+        key: "2",
         label: <div onClick={onLogout}>Logout</div>,
       },
+
 
     ]}
   />
